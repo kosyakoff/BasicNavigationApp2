@@ -9,8 +9,10 @@ using Android.Widget;
 
 namespace BasicNavigationApp2
 {
+    using GalaSoft.MvvmLight.Views;
+
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : ActivityBase/*AppCompatActivity*/
     {
 
         protected override void OnCreate(Bundle savedInstanceState)
