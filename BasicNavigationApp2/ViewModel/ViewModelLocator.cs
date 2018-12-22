@@ -14,7 +14,16 @@
 
         #region Properties
 
-        public MainViewModel Main { get; } = ServiceLocator.Current.GetInstance<MainViewModel>();
+        private MainViewModel _mainViewModel;
+
+
+        public MainViewModel MainViewModel
+        {
+            get
+            {
+                return _mainViewModel;
+            }
+        }
 
         #endregion
 
@@ -23,8 +32,11 @@
         public ViewModelLocator()
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-
             SimpleIoc.Default.Register<MainViewModel>();
+
+            _mainViewModel = ServiceLocator.Current.GetInstance<MainViewModel>();
+
+           
         }
 
         #endregion

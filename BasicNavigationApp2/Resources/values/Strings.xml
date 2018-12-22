@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">BasicNavigationApp2</string>
-    <string name="action_settings">Settings</string>
+    <string name="navigateToSecondPage">Navigate to Second Page</string>
 </resources>

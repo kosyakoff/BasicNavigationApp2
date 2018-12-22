@@ -9,7 +9,6 @@
     {
         #region Fields
 
-        private RelayCommand _navigateCommand;
         private readonly INavigationService _navigationService;
         private string _welcomeTitle;
 
@@ -21,7 +20,7 @@
         {
             _navigationService = navigationService;
             WelcomeTitle = "Home Page";
-            _navigateCommand = new RelayCommand(() =>navigationService.NavigateTo(ViewModelLocator.SecondPageKey));
+            NavigateCommand = new RelayCommand(() =>navigationService.NavigateTo(ViewModelLocator.SecondPageKey));
         }
 
         #endregion
@@ -38,6 +37,7 @@
                 Set(ref _welcomeTitle, value);
             }
         }
-        
+
+        public RelayCommand NavigateCommand { get; }
     }
 }
